@@ -113,9 +113,17 @@ Sources: R07
 - Comparer Ridge, arbre, forêt et boosting sur les mêmes plis.
 - Tracer l'erreur du boosting au fil des itérations.
 - Justifier un compromis entre RMSE, coût et complexité.
-> 90 minutes · notebooks/etudiants/02_ensembles.ipynb
-Notes: La source synthétique permet de connaître les variables informatives sans télécharger un nouveau jeu. Demander de conserver tous les résultats, y compris les essais moins bons. Le temps d'ajustement dépend du matériel. Une extension stacking est proposée si les objectifs centraux sont atteints. Le débrief compare les mécanismes, pas seulement le classement des chiffres.
+> 70 min de TP + 20 min de démo · variantes locale et Colab
+Notes: Répartir le créneau en 70 minutes sur TP02 puis 20 minutes de démonstration Colab08. Variante autonome disponible dans notebooks/colab/etudiants/02_ensembles.ipynb. Le stacking reste une extension après la séance si nécessaire. La source synthétique permet de connaître les variables informatives sans télécharger un nouveau jeu. Demander de conserver tous les résultats, y compris les essais moins bons. Le temps d'ajustement dépend du matériel. Une extension stacking est proposée si les objectifs centraux sont atteints. Le débrief compare les mécanismes, pas seulement le classement des chiffres.
 Sources: R07
+
+## Colab : XGBoost sur 41 188 lignes
+- Conserver l'ordre temporel : train, validation, puis test réservé.
+- Comparer une logistique et un boosting avec arrêt anticipé.
+- Mesurer qualité et temps, puis sauvegarder les preuves.
+> Démonstration de 20 minutes · CPU ou GPU NVIDIA facultatif
+Notes: Ouvrir notebooks/colab/demonstrations/08_xgboost_colab.ipynb. Répartition de l'animation : protocole 5 min, exécution et courbes 8 min, critique 7 min. Le fichier UCI complet est ordonné chronologiquement : train 60 %, validation 20 %, test 20 %. Retirer duration et campaign pour le scénario avant premier contact ; auditer encore les autres variables. Le prétraitement est appris sur train uniquement ; l'early stopping utilise la validation. Le gagnant est choisi par AP de validation, puis évalué une fois sur le test. GPU XGBoost facultatif avec repli CPU. Ce volume tient en mémoire et n'est pas présenté comme du big data. Les temps dépendent du matériel. Télécharger le manifeste, le tableau de validation et l'export XGBoost ; ce dernier n'inclut pas le prétraitement et n'est pas un service de production.
+Sources: R32, R43, R46
 
 ## Définir un espace d'hyperparamètres
 - Séparer les paramètres appris des réglages choisis avant fit.
@@ -162,7 +170,7 @@ Sources: R03
 - Même modèle, mêmes bornes et même métrique.
 - Restituer les scores externes et les limites de la comparaison.
 > 90 minutes · notebooks/etudiants/03_optimisation.ipynb
-Notes: Le TP utilise une logistique et des données synthétiques pour que le coût reste léger et que le protocole soit visible. L'objectif n'est pas de gagner un concours d'AP. Demander aux étudiants d'annoter quelles observations sont visibles à chaque étape. Les résultats aléatoires doivent être enregistrés, pas relancés jusqu'à obtenir une préférence attendue.
+Notes: Une variante Colab autonome est disponible dans notebooks/colab/etudiants/03_optimisation.ipynb ; elle utilise le CPU. Le TP utilise une logistique et des données synthétiques pour que le coût reste léger et que le protocole soit visible. L'objectif n'est pas de gagner un concours d'AP. Demander aux étudiants d'annoter quelles observations sont visibles à chaque étape. Les résultats aléatoires doivent être enregistrés, pas relancés jusqu'à obtenir une préférence attendue.
 Sources: R09, R10
 
 ## Quiz J2 : mécanismes et protocole

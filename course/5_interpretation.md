@@ -117,7 +117,7 @@ Sources: R30, R32
 - Comparer PDP et ICE sur une relation synthétique connue.
 - Construire un intervalle conforme et vérifier sa couverture observée.
 > 90 minutes · notebooks/etudiants/06_interpretation.ipynb
-Notes: Quatre sous-ensembles sont explicités : train, diagnostic, calibration conforme et test. Le jeu diagnostic ne doit pas devenir un substitut du test final. La calibration conforme est distincte de la calibration probabiliste du jour 3. Demander aux étudiants de dire à voix haute de laquelle ils parlent.
+Notes: Une variante Colab autonome est disponible dans notebooks/colab/etudiants/06_interpretation.ipynb ; elle utilise le CPU. Quatre sous-ensembles sont explicités : train, diagnostic, calibration conforme et test. Le jeu diagnostic ne doit pas devenir un substitut du test final. La calibration conforme est distincte de la calibration probabiliste du jour 3. Demander aux étudiants de dire à voix haute de laquelle ils parlent.
 Sources: R25, R26, R29
 
 ## Veille au 19 septembre 2026
@@ -125,8 +125,8 @@ Sources: R25, R26, R29
 - TabArena : comparer les méthodes avec leurs budgets et protocoles.
 - Modèles tabulaires de fondation : un axe de recherche à évaluer.
 > La nouveauté ne dispense pas d'une baseline ni d'un test adapté
-Notes: La version 1.9.1 est documentée en septembre 2026. Les TP figent les versions dans uv.lock plutôt que dépendre d'un site stable évolutif. Présenter TabArena comme un benchmark vivant : les rangs varient avec les réglages, le budget et les jeux. Aucune supériorité universelle ni mesure de vitesse locale n'est affirmée dans ce cours.
-Sources: R34, R36
+Notes: La version 1.9.1 est documentée en septembre 2026. Les TP figent les versions dans uv.lock plutôt que dépendre d'un site stable évolutif. Présenter TabArena comme un benchmark vivant : les rangs varient avec les réglages, le budget et les jeux. Aucune supériorité universelle ni mesure de vitesse locale n'est affirmée dans ce cours. Dans les 15 minutes de veille, réserver 10 minutes aux publications/benchmarks et 5 minutes à une ouverture uniquement orale sur Ray. Suivre docs/NOTES_ORALES_RAY.md : du TP Optuna à la coordination d'essais avec Tune, rôle de Core, Data et Train, checkpoints et coût de distribution. Ray remonte à 2018 ; le situer dans les pratiques actuelles sans le présenter comme une invention de 2026. Aucun TP, installation Ray ou évaluation supplémentaire.
+Sources: R34, R36, R44, R45, R47, R48, R49
 
 ## TabPFN : publication et annonce récente
 - 2025 : article Nature sur TabPFN v2 et les petits jeux tabulaires.

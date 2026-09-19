@@ -15,3 +15,23 @@ Le dictionnaire original `bank-additional-names.txt` est conservé. Le loader tr
 Les observations remontent à 2008–2010. Le sous-échantillon aléatoire ne contient pas de date complète ni d'identifiant personne permettant de garantir une validation temporelle et par client. La stratification utilisée dans le cours est une simplification pédagogique. Elle ne prouve pas une performance sur de futurs appels. La source complète est ordonnée chronologiquement, mais son protocole demanderait encore un audit de la disponibilité des variables et des contacts répétés.
 
 Les TP02 à TP06 emploient aussi des données **synthétiques** produites par scikit-learn avec des graines explicites. Elles n'ont aucune valeur de résultat métier et ne nécessitent pas de téléchargement.
+
+
+## Démonstration Colab 08 : fichier complet
+
+La démo télécharge `bank-additional-full.csv` depuis l'archive UCI publique, sans l'ajouter au dépôt.
+Le CSV original compte **41 188 lignes et 21 colonnes**, dont `y`, et pèse 5 834 924 octets.
+Il est ordonné dans le temps selon UCI. Empreinte SHA-256 vérifiée le 19 septembre 2026 :
+
+`74adfc578bf77a7ff4bb1ba4a9f8709d9e3c6907342959c2c8416847e0afb4d8`
+
+Source : https://archive.ics.uci.edu/static/public/222/bank+marketing.zip →
+`bank-additional.zip` → `bank-additional/bank-additional-full.csv`.
+Même attribution Moro, Rita et Cortez (2014), DOI 10.24432/C5K306 et licence CC BY 4.0.
+Aucune transformation des octets mis en cache ; `unknown` devient manquant en mémoire.
+
+La démo exclut `duration` et `campaign`, soit **18 entrées**, pour un scénario avant premier contact.
+Elle utilise les 24 712 premières lignes pour train, les 8 238 suivantes pour validation et les
+8 238 dernières pour test, sans mélange. Le prétraitement est appris sur train. L'ordre source
+ne résout pas l'absence d'identifiant client ou d'horodatage complet ; les autres variables et les
+contacts répétés exigeraient encore un audit. Les changements de prévalence font partie du débrief.

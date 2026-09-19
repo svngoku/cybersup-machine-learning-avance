@@ -24,7 +24,7 @@ Les objectifs supplémentaires validés sont l'interprétabilité, l'évaluation
 |---|---:|---|
 | Arbres, Gini, bagging et Random Forest | 60 | Gain de Gini et formule de variance |
 | Boosting, calcul d'une itération, histogrammes | 60 | Exemple numérique et courbe d'erreur |
-| TP02 ensembles | 90 | RMSE, temps et comparaison argumentée |
+| TP02 ensembles et démo Colab08 | 90 | 70 min de TP02 + 20 min XGBoost sur UCI complet |
 | Hyperparamètres, recherche, CV imbriquée | 75 | Schéma interne/externe et budget |
 | TP03 optimisation | 90 | Huit essais par méthode, scores externes |
 | Comparaison critique, quiz et débrief | 45 | Justifier une petite différence |
@@ -59,7 +59,7 @@ Les objectifs supplémentaires validés sont l'interprétabilité, l'évaluation
 | Séquence | Minutes | Modalité / preuve |
 |---|---:|---|
 | Permutation, PDP/ICE, SHAP, conforme, documentation | 60 | Calcul Shapley et hypothèses de couverture |
-| Veille 2025–2026 et lecture de benchmark | 15 | Distinguer article, benchmark et annonce |
+| Veille 2025–2026 et évolution des outils | 15 | 10 min publications/benchmarks + 5 min Ray à l’oral |
 | TP06 interprétation et incertitude | 90 | Couverture, largeur et explications |
 | Projet final en binôme | 180 | Notebook, manifeste et model card |
 | Soutenances et synthèse | 45 | 5 min par binôme, jusqu'à 8 binômes |
@@ -69,6 +69,18 @@ Les objectifs supplémentaires validés sont l'interprétabilité, l'évaluation
 **Total général : 2 100 minutes = 35 heures.** Les heures de TP incluent les essais, l'interprétation, la rédaction et l'aide du formateur. Exécuter les corrigés en quelques secondes ne remplace pas ce travail.
 
 Pour plus de huit binômes, utiliser une restitution par posters avec questions individuelles dans le créneau prévu, ou réduire le projet à 150 min et porter la restitution à 75 min. La somme reste 420 min. Le formateur peut déplacer une extension facultative sans supprimer les objectifs centraux.
+
+## Exécution en salle et dans Colab
+
+Les TP02, TP03 et TP06 existent en variantes Colab autonomes, avec versions étudiantes et corrigées.
+La démonstration 08 utilise XGBoost et le jeu UCI complet de 41 188 lignes : CPU suffisant, GPU
+facultatif si disponible. Les données restent historiques et les scores sont discutés avec leur
+protocole. Le créneau de 20 minutes remplace l'extension stacking en séance ; elle reste disponible
+après le cours. Préparer les installations avant le démarrage du premier TP.
+
+Voir le [guide Colab](COLAB.md). Distribuer le pack étudiant pour éviter une dépendance aux accès
+au dépôt privé. Les autres TP restent exécutables localement. Ray est présenté uniquement à
+l'oral avec les [notes du formateur](NOTES_ORALES_RAY.md), sans installation ni TP additionnel.
 
 ## Différenciation et animation
 

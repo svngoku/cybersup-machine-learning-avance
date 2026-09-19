@@ -7,12 +7,14 @@ DEST = ROOT / "output/CYBERSUP-ML-Avance-Pack-Etudiant.zip"
 PREFIX = "CYBERSUP-ML-Avance-Etudiant/"
 files = [".python-version", "pyproject.toml", "uv.lock", "requirements.txt", "mlcourse.py",
          "output/CYBERSUP-Machine-Learning-Avance-2026.pdf",
-         "docs/PROGRAMME_35H.md", "docs/ATELIER_FEATURES.md",
+         "docs/PROGRAMME_35H.md", "docs/ATELIER_FEATURES.md", "docs/COLAB.md",
          "evaluation/QUIZ.md", "evaluation/PROJET.md", "evaluation/MODEL_CARD.md",
          "resources/RESSOURCES.md", "resources/sources.json", "resources/PROVENANCE.md",
          "data/README.md", "data/bank-additional.csv", "data/bank-additional-names.txt",
          "assets/chart-data.json"]
 files += [p.relative_to(ROOT).as_posix() for p in sorted((ROOT / "notebooks/etudiants").glob("*.ipynb"))]
+files += [p.relative_to(ROOT).as_posix() for folder in ["etudiants", "demonstrations"]
+          for p in sorted((ROOT / "notebooks/colab" / folder).glob("*.ipynb"))]
 readme = """# Machine Learning Avancé · Pack étudiant
 
 Cybersup · M2 Data / IA · 21–25 septembre 2026 · 35 heures
@@ -34,6 +36,9 @@ Les données obligatoires sont incluses. Sans uv : créer un environnement Pytho
 - Support à projeter : [PDF](output/CYBERSUP-Machine-Learning-Avance-2026.pdf).
 - [Programme](docs/PROGRAMME_35H.md) et [atelier features](docs/ATELIER_FEATURES.md).
 - Huit notebooks guidés dans `notebooks/etudiants/`, de 00 à 07.
+- Trois variantes Colab autonomes (02, 03, 06) et une démo XGBoost (08) dans `notebooks/colab/`.
+- [Guide Colab](docs/COLAB.md) : importer le fichier dans Colab, installer puis exécuter ; aucun accès GitHub requis.
+- Pour la démo XGBoost en local : `uv sync --frozen --extra colab`, puis `uv run --extra colab jupyter lab`.
 - [Quiz](evaluation/QUIZ.md), [projet](evaluation/PROJET.md), [model card](evaluation/MODEL_CARD.md).
 - [Bibliographie](resources/RESSOURCES.md) et [provenance des données](data/README.md).
 
@@ -51,14 +56,17 @@ aux logos ou aux ressources de tiers. Voir [provenance](resources/PROVENANCE.md)
 with ZipFile(DEST, "w", ZIP_DEFLATED) as archive:
     archive.writestr(PREFIX + "README.md", readme)
     for name in files:
-        assert "corrig" not in name.lower() and not name.endswith(".pptx")
+        assert "corrig" not in name.lower() and not name.endswith(".pptx") and "NOTES_ORALES" not in name
         source = ROOT / name
         if name == "docs/ATELIER_FEATURES.md":
             text = source.read_text().replace("Corrigé réservé au formateur dans `ATELIER_FEATURES_CORRIGE.md`.", "Correction remise par le formateur.")
+            archive.writestr(PREFIX + name, text)
+        elif name == "docs/PROGRAMME_35H.md":
+            text = source.read_text().replace("[notes du formateur](NOTES_ORALES_RAY.md)", "notes réservées au formateur")
             archive.writestr(PREFIX + name, text)
         else:
             archive.write(source, PREFIX + name)
 with ZipFile(DEST) as archive:
     assert archive.testzip() is None
-    assert len([n for n in archive.namelist() if n.endswith(".ipynb")]) == 8
+    assert len([n for n in archive.namelist() if n.endswith(".ipynb")]) == 12
 print(f"Pack étudiant : {len(files) + 1} fichiers ; {DEST.stat().st_size:,} octets")

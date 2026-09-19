@@ -13,3 +13,6 @@ dependencies = [
 
 [tool.uv]
 package = false
+
+[project.optional-dependencies]
+colab = ["xgboost==3.1.3"]

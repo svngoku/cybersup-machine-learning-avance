@@ -48,3 +48,17 @@ Les liens `stable` évoluent. Les versions d’exécution du cours restent celle
 | R40 | 200 |
 | R41 | 200 |
 | R42 | 200 |
+
+## Complément Colab et Ray · 19 septembre 2026
+
+Les sept références R43–R49 ont été consultées sur leurs sites officiels. Les éventuels 429 du contrôle direct signalent une limitation automatisée. La documentation XGBoost citée pour l’exécution est celle de la branche 3.1, correspondant à la version 3.1.3 figée dans le notebook.
+
+| Référence | Contrôle direct |
+|---|---|
+| R43 | 200 |
+| R44 | 200 |
+| R45 | 200 |
+| R46 | 429 |
+| R47 | 200 |
+| R48 | 200 |
+| R49 | 200 |

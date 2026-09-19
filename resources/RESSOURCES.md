@@ -423,3 +423,73 @@ Accès / réutilisation : Lire à la source ; ne pas republier sans vérifier la
 t-SNE pour l'exploration. Les distances et tailles de groupes projetés ne sont pas des preuves de structure globale.
 
 Accès / réutilisation : Lire à la source ; ne pas republier sans vérifier la licence.
+
+## R43 · Google Colab — Frequently Asked Questions
+
+Google Colab · consulté le 19 septembre 2026
+
+[Accéder à la ressource](https://research.google.com/colaboratory/faq.html)
+
+Import de notebooks, sessions temporaires, disponibilité et limites variables des accélérateurs. Guide Colab et démo08.
+
+Accès / réutilisation : Lire à la source ; ne pas republier sans vérifier la licence.
+
+## R44 · Ray Overview
+
+Équipe Ray · documentation 2.58.0 consultée le 19 septembre 2026
+
+[Accéder à la ressource](https://docs.ray.io/en/latest/ray-overview/index.html)
+
+Ouverture orale uniquement : Core, Data, Train et Tune. Aucun cluster ni installation demandés.
+
+Accès / réutilisation : Lire à la source ; ne pas republier sans vérifier la licence.
+
+## R45 · Ray Tune
+
+Équipe Ray · consulté le 19 septembre 2026
+
+[Accéder à la ressource](https://docs.ray.io/en/latest/tune/index.html)
+
+Distinguer recherche de configurations (dont Optuna), orchestration des essais et scheduling.
+
+Accès / réutilisation : Lire à la source ; ne pas republier sans vérifier la licence.
+
+## R46 · XGBoost GPU Support — branche 3.1
+
+Équipe XGBoost · documentation 3.1.3 consultée le 19 septembre 2026
+
+[Accéder à la ressource](https://xgboost.readthedocs.io/en/release_3.1.0/gpu/index.html)
+
+Démo08 figée sur XGBoost 3.1.3, tree_method=hist et device=cuda ; CUDA >= 12.0 pour cette branche. CPU de secours, aucune promesse de vitesse.
+
+Accès / réutilisation : Lire à la source ; ne pas republier sans vérifier la licence.
+
+## R47 · Ray: A Distributed Framework for Emerging AI Applications
+
+Moritz et al. · OSDI 2018
+
+[Accéder à la ressource](https://www.usenix.org/conference/osdi18/presentation/moritz)
+
+Source historique primaire : ne pas présenter Ray comme une invention de 2026. Page de l’article accessible avec PDF.
+
+Accès / réutilisation : Lire à la source ; ne pas republier sans vérifier la licence.
+
+## R48 · Ray Train
+
+Équipe Ray · consulté le 19 septembre 2026
+
+[Accéder à la ressource](https://docs.ray.io/en/latest/train/train.html)
+
+Entraînement distribué et reprise par checkpoints, évoqués à l’oral uniquement.
+
+Accès / réutilisation : Lire à la source ; ne pas republier sans vérifier la licence.
+
+## R49 · Ray Data
+
+Équipe Ray · consulté le 19 septembre 2026
+
+[Accéder à la ressource](https://docs.ray.io/en/latest/data/data.html)
+
+Lecture, transformation et alimentation de traitements distribués ; perspective orale.
+
+Accès / réutilisation : Lire à la source ; ne pas republier sans vérifier la licence.

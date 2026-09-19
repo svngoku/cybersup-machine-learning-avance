@@ -47,6 +47,14 @@ Sources: R32, R39
 > CPU suffisant ; données des TP disponibles hors ligne après installation
 Notes: Ouvrir le README avec les étudiants. Exécuter uv sync --frozen avant la formation, puis uv run jupyter lab. Sans uv, installer les dépendances depuis requirements.txt dans un environnement Python 3.12. Les corrections ne sont pas protégées par le simple nom d'un dossier : fournir une archive étudiante si l'on veut les masquer.
 
+## Exécuter un exemple dans Colab
+- Importer un notebook autonome depuis le pack étudiant.
+- Installer les dépendances, puis exécuter les cellules dans l'ordre.
+- Sauvegarder le notebook et ses résultats avant de quitter la session.
+> CPU pour les TP ; GPU facultatif pour la démonstration XGBoost
+Notes: Suivre docs/COLAB.md. Les variantes des TP02, TP03 et TP06 utilisent des données synthétiques. La démo08 télécharge le jeu UCI complet et vérifie son empreinte. Le dépôt reste privé : l'import du fichier local évite de demander un jeton GitHub aux étudiants. Colab nécessite un compte Google et une connexion ; les runtimes sont temporaires et l'accès au GPU n'est pas garanti. Le choix d'un GPU n'accélère pas automatiquement les estimateurs scikit-learn. Préparer la première installation avant la séance ; le parcours local reste disponible.
+Sources: R43, R46
+
 ## Ce que nous reprenons des supports de 2020
 - Le cadrage du problème, les types de variables et le cycle de projet.
 - Les arbres, la matrice de confusion et le raisonnement par scoring.
