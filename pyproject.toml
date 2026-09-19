@@ -1,0 +1,15 @@
+[project]
+name = "cybersup-machine-learning-avance"
+version = "1.0.0"
+description = "Formation M2 Data / IA, 35 heures, 21-25 septembre 2026"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "numpy>=2.2,<3", "pandas>=2.2,<4", "scipy>=1.15,<2",
+  "scikit-learn==1.9.1", "imbalanced-learn==0.14.2",
+  "matplotlib>=3.10,<4", "optuna==4.9.0", "joblib>=1.5,<2",
+  "nbformat>=5,<6", "nbclient>=0.10,<1", "ipykernel>=6,<8",
+  "jupyterlab>=4,<5", "requests>=2.32,<3", "qrcode[pil]>=8,<9"
+]
+
+[tool.uv]
+package = false

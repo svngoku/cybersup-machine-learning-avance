@@ -1,0 +1,22 @@
+name: Validate course notebooks
+on:
+  push:
+    paths: ["labs/**", "mlcourse.py", "scripts/**", "data/**", "pyproject.toml", "uv.lock", ".github/workflows/notebooks.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  notebooks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      OMP_NUM_THREADS: "2"
+      OPENBLAS_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --frozen
+      - run: uv run python scripts/build_notebooks.py
+      - run: uv run python scripts/check_notebooks.py --version corriges
+      - run: uv run python scripts/check_notebooks.py --version etudiants

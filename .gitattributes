@@ -1,0 +1,5 @@
+* text=auto
+*.md whitespace=-blank-at-eol
+# Preserve the official UCI bytes and checksum on every operating system.
+data/bank-additional.csv -text -whitespace
+data/bank-additional-names.txt -text -whitespace
